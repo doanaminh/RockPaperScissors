@@ -11,30 +11,32 @@
        PAGE TITLE
       -->
       <h1>
-        Rock, Paper, Scissors
+        RPS
       </h1>
 
       <!-- 
-       INSTRUCTIONS UI
+       RESULTS
       -->
-      <h2>
-        Make your selection, and see if you can beat the computer!
+      <h2 class="results">
+        Did you win?
       </h2>
+
+
+
       <!-- 
       PICTURE GOES HERE
       -->
-      <section>
-        <img id="playerRock" class="playerChoice rock hidden" src="http://localhost:8000/images/rock.png" alt="player choice image">
-        <img id="playerPaper" class="playerChoice paper hidden" src="http://localhost:8000/images/paper.png" alt="player choice image">
-        <img id="playerScisors" class="playerChoice scissors hidden" src="http://localhost:8000/images/scissors.png" alt="player choice image">
-        <h3 id="playerChoice"></h3>
-      </section>
 
-      <section>
-        <img id="computerRock" class="computerChoice rock hidden" src="http://localhost:8000/images/rock.png" alt="computer choice image">
-        <img id="computerPaper" class="computerChoice paper hidden" src="http://localhost:8000/images/paper.png" alt="computer choice image">
-        <img id="computerScissors" class="computerChoice scissors hidden" src="http://localhost:8000/images/scissors.png" alt="computer choice image">
-        <h3 id="computerChoice"></h3>
+      <section class="pictureFrame">
+        <section class="player">
+          <img id="playerImg" class="playerChoice rock hidden" src="/images/transQ.png" alt="player choice image">
+          <h3 id="playerChoice"></h3>
+        </section>
+
+        <section class="computer">
+          <img id="computerImg" class="computerChoice rock hidden" src="/images/transQ.png" alt="computer choice image">
+          <h3 id="computerChoice"></h3>
+        </section>
       </section>
       
       
@@ -55,31 +57,6 @@
         <button type="button" id="scissors" class="userSelection scissors">
           Scissors
         </button>
-        
-      </section>
-      
-      
-      <!-- 
-      CONFIRM AND RESET BUTTONS
-      -->
-      <section>
-        
-        <button type="button" class="confirm">
-          Confirm
-        </button>
-        
-        <button type="button" class="reset">
-          Play Again
-        </button>
-        
-      </section>
-      
-      <!--Results-->
-      <section>
-        
-        <h2 class="results">
-          Did you win?
-        </h2>
         
       </section>
         

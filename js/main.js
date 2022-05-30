@@ -4,83 +4,41 @@ const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
 //playerChoice images
-const playerRock  = document.querySelector('#playerRock');
-const playerPaper = document.querySelector('#playerPaper');
-const playerScissors = document.querySelector('#playerScisors')
+const playerImg  = document.querySelector('#playerImg');
 
 //coputerChoice images
-const computerRock = document.querySelector('#computerRock')
-const computerPaper = document.querySelector('#computerPaper')
-const computerScissors = document.querySelector('#computerScissors')
+const computerImg = document.querySelector('#computerImg')
 
 //results and reset definitions
 const result = document.querySelector('.results')
-const reset = document.querySelector('.reset')
 
 //add event listeners
 const userSelection = document.querySelectorAll('.userSelection');
 userSelection.forEach(selection => {
   selection.addEventListener('click',makeReq)
 })
-rock.addEventListener('click', showPlayerRock)
-paper.addEventListener('click', showPlayerPaper)
-scissors.addEventListener('click', showPlayerScissors)
+// rock.addEventListener('click', showPlayerRock)
+// paper.addEventListener('click', showPlayerPaper)
+// scissors.addEventListener('click', showPlayerScissors)
 
 //Show Player Selection
-function showPlayerRock(){
-  playerPaper.classList.add('hidden')
-  playerScissors.classList.add('hidden')
+// function showPlayerRock(){
+//   playerPaper.classList.add('hidden')
+//   playerScissors.classList.add('hidden')
 
-  if (playerRock.classList.contains('hidden')) {
-    playerRock.classList.toggle('hidden')
-  }
-}
+//   if (playerRock.classList.contains('hidden')) {
+//     playerRock.classList.toggle('hidden')
+//   }
+// }
 
-function showPlayerPaper(){
-  playerScissors.classList.add('hidden')
-  playerRock.classList.add('hidden')
 
-  if (playerPaper.classList.contains('hidden')) {
-    playerPaper.classList.toggle('hidden')
-  }
-}
-
-function showPlayerScissors(){
-  playerRock.classList.add('hidden')
-  playerPaper.classList.add('hidden')
-
-  if (playerScissors.classList.contains('hidden')) {
-    playerScissors.classList.toggle('hidden')
-  }
-}
 
 //show computer Selection
 function showComputerRock(){
-  computerPaper.classList.add('hidden')
-  computerScissors.classList.add('hidden')
-
-  if (computerRock.classList.contains('hidden')){
-    computerRock.classList.toggle('hidden')
-  }
+  computerImg.src = `http://localhost:8000/images/${data.img}.png`;
+  
 }
 
-function showComputerPaper(){
-  computerScissors.classList.add('hidden')
-  computerRock.classList.add('hidden')
-
-  if (computerPaper.classList.contains('hidden')){
-    computerPaper.classList.toggle('hidden')
-  }
-}
-
-function showComputerScissors(){
-  computerRock.classList.add('hidden')
-  computerPaper.classList.add('hidden')
-
-  if (computerScissors.classList.contains('hidden')){
-    computerScissors.classList.toggle('hidden')
-  }
-}
 
 // WIN CONDITIONS 
 function winner(player, computer) {
@@ -117,21 +75,18 @@ async function makeReq(event){
   const { target } = event
 
   if (target.classList.contains('rock')) {
-      player = 'rock'
+      player = 'rock';
+      playerImg.src = `http://localhost:8000/images/rock.png`;
   } else if (target.classList.contains('paper')) {
-      player = 'paper'
+      player = 'paper';
+      playerImg.src = `http://localhost:8000/images/paper.png`;
   } else if (target.classList.contains('scissors')) {
-      player = 'scissors'
+      player = 'scissors';
+      playerImg.src = `http://localhost:8000/images/scissors.png`;
   }
 
   const computer = data.result
-  if (data.result === 'rock') {
-    showComputerRock()
-  } else if (data.result === 'paper') {
-    showComputerPaper()
-  } else if (data.result === 'scissors') {
-    showComputerScissors()
-  }
+  computerImg.src = `http://localhost:8000${data.img}`;
   
   winner(player,computer)
 }

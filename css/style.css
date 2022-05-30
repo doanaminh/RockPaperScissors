@@ -1,7 +1,51 @@
-h1{
-  color: red;
+body{
+  background: gray;
 }
 
-.hidden {
-  display: none;
+button {
+  border-color: white;
+  background-color: dodgerblue;
+  color:orangered;
+  border-radius: 10px;
+  min-height: 40px;
+  min-width: 100px;
 }
+
+h1, h2, h3{
+  color: white;
+}
+
+.game{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(219, 116, 116, 0.4);
+  width: 100%;
+}
+
+.btnWrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.choiceWrap {
+  display: flex;
+  justify-content:space-between;
+}
+
+/* 
+BOX FOR THE IMAGES AND PLAYER/CPU CHOICE TEXT
+*/
+.pictureFrame {
+  width: 80vw;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
