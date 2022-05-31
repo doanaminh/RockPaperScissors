@@ -1,4 +1,4 @@
-# RockPaperScissors
+# RPS
 A full stack Rock Paper Scissors App
 <br>
 <br>
