@@ -2,24 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Dispute Settlement System</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="game">
       <!--
        PAGE TITLE
       -->
-      <h1>
+      <h1 class="results">
         RPS
       </h1>
 
       <!-- 
        RESULTS
       -->
-      <h2 class="results">
-        Did you win?
-      </h2>
+     
 
 
 
@@ -29,12 +30,12 @@
 
       <section class="pictureFrame">
         <section class="player">
-          <img id="playerImg" class="playerChoice rock hidden" src="/images/transQ.png" alt="player choice image">
+          <img id="playerImg" class="playerChoice rock hidden" src="/images/rock.png" alt="player choice image">
           <h3 id="playerChoice"></h3>
         </section>
 
         <section class="computer">
-          <img id="computerImg" class="computerChoice rock hidden" src="/images/transQ.png" alt="computer choice image">
+          <img id="computerImg" class="computerChoice rock hidden" src="/images/rock.png" alt="computer choice image">
           <h3 id="computerChoice"></h3>
         </section>
       </section>
@@ -44,24 +45,39 @@
       <!-- 
       BUTTONS FOR SELECTION
       -->
+
+      <h2>
+        SELECT A CHOICE
+      </h2>
       <section>
       
         <button type="button" id="rock" class="userSelection rock">
-          Rock
+          ROCK
         </button>
         
         <button type="button" id="paper" class="userSelection paper">
-          Paper
+          PAPER
         </button>
         
         <button type="button" id="scissors" class="userSelection scissors">
-          Scissors
+          SCISSORS
         </button>
         
       </section>
         
      </main>
     
+
+     <footer>
+      <span>Created by:</span> 
+      <a href="https://twitter.com/_jcodes" target="_blank">@_jcodes</a>
+      <a href="https://twitter.com/JustinQuinn_" target="_blank">@JustinQuinn_</a>
+      <a href="https://twitter.com/thaoly258" target="_blank">@thaoly258</a>
+      <a href="https://twitter.com/YousefHosny" target="_blank">@YousefHosny</a>
+      <a href="https://twitter.com/MdRez19" target="_blank">@MdRez19</a>
+      <a href="https://twitter.com/doanaminh" target="_blank">@doanaminh</a>
+     </footer>
+
     <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>

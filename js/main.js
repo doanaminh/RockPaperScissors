@@ -46,26 +46,26 @@ function winner(player, computer) {
       result.textContent = 'Tie'
   } else if (player === 'rock') {
       if(computer === 'paper'){
-          result.textContent = 'Computer Wins!';
+          result.textContent = 'COMPUTER WINS!';
       } else {
-          result.textContent = 'You Win!';
+          result.textContent = 'YOU WIN!';
       }
   } else if (player === 'scissors') {
       if(computer === 'rock'){
-          result.textContent = 'Computer Wins!';
+          result.textContent = 'COMPUTER WINS!';
       } else {
-          result.textContent = 'You Win!';
+          result.textContent = 'YOU WIN!';
       }
   } else if (player === 'paper') {
       if(computer === 'scissors'){
-          result.textContent = 'Computer Wins!';
+          result.textContent = 'COMPUTER WINS!';
       } else {
-          result.textContent = 'You Win!';
+          result.textContent = 'YOU WIN!';
       }
   }
 
-  document.querySelector('#playerChoice').textContent = player;
-  document.querySelector('#computerChoice').textContent = computer;
+//   document.querySelector('#playerChoice').textContent = player;
+//   document.querySelector('#computerChoice').textContent = computer;
 }
 
 async function makeReq(event){
