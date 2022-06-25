@@ -35,7 +35,7 @@ userSelection.forEach(selection => {
 
 //show computer Selection
 function showComputerRock(){
-  computerImg.src = `http://localhost:8000/images/${data.img}.png`;
+  computerImg.src = `${data.img}`;
   
 }
 
@@ -76,17 +76,17 @@ async function makeReq(event){
 
   if (target.classList.contains('rock')) {
       player = 'rock';
-      playerImg.src = `http://localhost:8000/images/rock.png`;
+      playerImg.src = `/images/rock.png`;
   } else if (target.classList.contains('paper')) {
       player = 'paper';
-      playerImg.src = `http://localhost:8000/images/paper.png`;
+      playerImg.src = `/images/paper.png`;
   } else if (target.classList.contains('scissors')) {
       player = 'scissors';
-      playerImg.src = `http://localhost:8000/images/scissors.png`;
+      playerImg.src = `/images/scissors.png`;
   }
 
   const computer = data.result
-  computerImg.src = `http://localhost:8000${data.img}`;
+  computerImg.src = `${data.img}`;
   
   winner(player,computer)
 }
